@@ -11,7 +11,8 @@ publisher = rospy.Publisher('/dialog', String, queue_size=10)
 
 def classify_intent(msg):
     text = msg.data['human_speech']['speech']
-    res = model.inference(text)
+    res = model.inference(text) # res는 최종 label output
+    # TODO res format check
     publisher.publish(res)
 
 if __name__ == '__main__':
