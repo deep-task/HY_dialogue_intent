@@ -23,4 +23,4 @@ class Model:
         out = self.kobert.run(inp) # 학습된 모델에 텍스트 입력해서 나온 결과
         _, result = torch.max(out, 1)   # result는 1d-tensor. tensor to list : .tolist()
         
-        return result.tolist()[0]       # 최종 result은 label 값만 내보내기
+        return result.tolist()[0]

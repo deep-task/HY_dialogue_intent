@@ -12,7 +12,7 @@ publisher = rospy.Publisher('/dialog', String, queue_size=10)
 def classify_intent(msg):
     text = msg.data['human_speech']['speech']
     out = model.inference(text) # res는 최종 label output
-    out_msg = make_response_json(out, text, )
+    out_msg = make_response_json(out, text)
     publisher.publish(out_msg)
 
 
