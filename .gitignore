@@ -1,0 +1,3 @@
+src/scripts/ckpt/
+src/scripts/data/data_kobert.pkl
+src/scripts/test_kobert.py
