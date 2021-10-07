@@ -1,0 +1,11 @@
+version: '2.2'
+
+services:
+    dm:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: intent
+        network_mode: host
+        volumes:
+            - ./src:/workspace/src

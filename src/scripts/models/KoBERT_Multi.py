@@ -1,6 +1,6 @@
 import torch
 from torch import nn
-from lib.kobert.pytorch_kobert import get_pytorch_kobert_model
+from kobert.pytorch_kobert import get_pytorch_kobert_model
 
 
 class BERTClassifier(nn.Module):
