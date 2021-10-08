@@ -41,7 +41,7 @@ None
 ```
 $ git clone https://github.com/DeepTaskHY/DM_Intent_2.git
 $ docker-compose build
-$ docker-compose run --rm dm
+$ docker-compose up dm
 ```
 
 ### 5.3 Test the module
@@ -67,14 +67,14 @@ $
 ```
 {  
    "header": {
+        "id": 1,
         "source": "perception",
         "target": ["dialog_intent", "planning"],
         "timestamp": "1563980552.933543682",
         "content": ["human_speech"]
    },
    "human_speech":{ 
-      "speech":"안녕하세요",
-      "name":"이병현",
+      "speech": "안녕하세요"
    }
 }
 ```
@@ -97,15 +97,15 @@ $
 ```
 {
     "header": {
+        "id": 1,
+        "timestamp": "1563980561.940629720",
+        "source": "dialog",
         "target": ["planning"], 
-        "content": ["dialog_intent"], 
-        "timestamp": "1563980561.940629720", 
-        "source": "dialog"
+        "content": ["dialog_intent"],
     }, 
     "dialog_intent": {
         "speech": "좋아진 것 같아.", 
-        "intent": "단순 정보 전달", 
-        "name": "이병현",
+        "intent": "단순 정보 전달",
         "information": {}
     }
 }
