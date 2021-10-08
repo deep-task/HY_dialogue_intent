@@ -51,15 +51,13 @@ To test this module, you can execute the following command line. This command se
 **homecare**
 
 ```
-$ cd dm_generator/
-$ roslaunch launch/dm_homecare.launch 
+$ 
 ```
 
 **reception**
 
 ```
-$ cd dm_generator/
-$ roslaunch launch/dm_reception.launch
+$ 
 ```
 
 
