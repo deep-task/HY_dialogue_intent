@@ -8,7 +8,7 @@ Intention Classifier is a module that analyzes the intention of the user’s utt
 - 2.2 Maintainer: Wonhyuk Choi, [gandet09@hanyang.ac.kr]()
 - 2.3 Author: Wonhyuk Choi, [gandet09@hanyang.ac.kr]()
 - 2.4 License (optional): 
-- 2.5 Source git: https://github.com/DeepTaskHY/DM_Generator_2
+- 2.5 Source git: https://github.com/DeepTaskHY/DM_Intent_2
 
 ## 3. Overview
 
