@@ -24,7 +24,7 @@ rm /tmp/cookie
 rm -rf authkey/
 rm -rf ckpt/
 unzip $FILENAME
-mv hyu_intent/authkey/configuration.json src/
+mv hyu_intent/authkey/configuration.json src/configuration.json
 mv hyu_intent/authkey src/
 mv hyu_intent/ckpt src/
 rm -r hyu_intent
