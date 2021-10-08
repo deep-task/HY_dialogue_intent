@@ -135,8 +135,8 @@ dmypy.json
 /src/configuration.json
 
 # Data
-src/keys/*
-src/ckpt/*
+src/keys/
+src/ckpt/
 src/data/data_kobert.pkl
 src/scripts/test_kobert.py
 src/scripts/home_publisher.py
