@@ -7,3 +7,4 @@ transformers < 4
 scikit-learn >= 1.0
 google-cloud-dialogflow==2.7.1
 https://github.com/SKTBrain/KoBERT/archive/master.zip
+https://github.com/DeepTaskHY/ROS/archive/main.zip
