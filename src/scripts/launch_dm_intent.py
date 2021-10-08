@@ -45,8 +45,8 @@ def get_information(human_speech):
 
 def classify_intent(msg):
     ros_input = json.loads(msg.data, encoding='utf-8')
-    if "intent" in ros_input['header']['target']:
-        text = ros_input['dialog_intent']['human_speech']
+    if "dialog_intent" in ros_input['header']['target']:
+        text = ros_input['human_speech']['speech']
         out = model.inference(text) # res는 최종 label output
         info = get_information(text)
 
@@ -63,7 +63,7 @@ def make_response_json(label, human_speech, information):
             "content": [
                 "dialog_intent"
             ],
-            "source": "intent",
+            "source": "dialog_intent",
             "target": [
                 "planning"
             ],
