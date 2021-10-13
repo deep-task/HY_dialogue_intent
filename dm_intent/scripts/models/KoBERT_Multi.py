@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+# -*- coding: utf-8 -*-
 import torch
 from torch import nn
 from kobert.pytorch_kobert import get_pytorch_kobert_model
