@@ -138,9 +138,12 @@ dm_intent/configuration.json
 dm_intent/keys/
 dm_intent/ckpt/
 dm_intent/data/data_kobert.pkl
+
+# Scripts
 dm_intent/scripts/test_kobert.py
 dm_intent/scripts/home_publisher.py
 dm_intent/scripts/re_publisher.py
+dm_intent/scripts/data_loader.py
 
 # Keep the folder by keeping .gitkeep
 !/**/.gitkeep
