@@ -132,15 +132,15 @@ dmypy.json
 .idea/
 
 # Configuration
-/src/configuration.json
+dm_intent/configuration.json
 
 # Data
-src/keys/
-src/ckpt/
-src/data/data_kobert.pkl
-src/scripts/test_kobert.py
-src/scripts/home_publisher.py
-src/scripts/re_publisher.py
+dm_intent/keys/
+dm_intent/ckpt/
+dm_intent/data/data_kobert.pkl
+dm_intent/scripts/test_kobert.py
+dm_intent/scripts/home_publisher.py
+dm_intent/scripts/re_publisher.py
 
 # Keep the folder by keeping .gitkeep
 !/**/.gitkeep

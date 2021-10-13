@@ -8,4 +8,4 @@ services:
         container_name: intent
         network_mode: host
         volumes:
-            - ./src:/workspace/src
+            - ./dm_intent:/workspace/src
