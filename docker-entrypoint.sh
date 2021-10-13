@@ -10,7 +10,7 @@ echo "source \"/opt/ros/$ROS_DISTRO/setup.sh\"" >> /etc/bash.bashrc
 echo "source /workspace/devel/setup.sh" >> /etc/bash.bashrc
 
 # Setup executable files
-chmod +x dm_intent/scripts/launcher.py
+chmod +x src/scripts/launcher.py
 
 # Download model files
 sudo apt-get install unzip
