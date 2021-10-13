@@ -1,3 +1,3 @@
 <launch>
-    <node pkg="dm_intent" name="DM_intent_node" type="launch_dm_intent.py" output="screen"/>
+    <node pkg="dm_intent" name="DM_intent_node" type="launcher.py" output="screen"/>
 </launch>
