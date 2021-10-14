@@ -47,34 +47,32 @@ def classify_intent(msg):
     ros_input = json.loads(msg.data, encoding='utf-8')
     if "dialog_intent" in ros_input['header']['target']:
         text = ros_input['human_speech']['speech']
-        id = ros_input['header']['id']
         out = model.inference(text) # res는 최종 label output
         info = get_information(text)
 
-        out_msg = make_response_json(out, text, id, info)
+        out_msg = make_response_json(out, text, info)
         print(out_msg)
     
         publisher.publish(json.dumps(out_msg))
 
 
-def make_response_json(label, human_speech, id, information):
+def make_response_json(label, human_speech, information):
     label_list = {0: '정보전달', 1: '인사', 2: '질문', 3: '요청', 4: '약속', 5: '수락', 6: '거부'}
     final_response = {
         "header": {
-            "id": id,
-            "timestamp": str(time.time()),
+            "content": [
+                "dialog_intent"
+            ],
             "source": "dialog_intent",
             "target": [
                 "planning"
             ],
-            "content": [
-                "dialog_intent"
-            ]
-            
+            "timestamp": str(time.time())
         },
         "dialog_intent": {
-            "speech": human_speech,
             "intent": label_list[label],
+            "speech": human_speech,
+            "name": "",
             "information": information
         }
     }
