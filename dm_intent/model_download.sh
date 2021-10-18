@@ -1,4 +1,3 @@
-   
 #!/bin/bash
 sudo apt-get install unzip
 sudo apt-get install curl

@@ -144,6 +144,7 @@ dm_intent/scripts/test_kobert.py
 dm_intent/scripts/home_publisher.py
 dm_intent/scripts/re_publisher.py
 dm_intent/scripts/data_loader.py
+dm_intent/typescript
 
 # Keep the folder by keeping .gitkeep
 !/**/.gitkeep

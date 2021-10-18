@@ -9,7 +9,7 @@ from google.protobuf import json_format
 import os, json
 from dtroslib.helpers import get_package_path, get_module_configuration, get_key_path
 from dtroslib.dialogflow import DialogflowClient
-
+from proto.marshal.collections.maps import MapComposite
 
 test_path = get_package_path('dm_intent')
 # test_path = '..'
@@ -36,7 +36,9 @@ def get_information(human_speech):
     information = {}
 
     for key, val in response.query_result.parameters.items():
-        if type(val) != str:
+        if isinstance(val, MapComposite):
+            val = dict(val) 
+        elif type(val) != str:
             val = list(val)
         information[key] = val
 
