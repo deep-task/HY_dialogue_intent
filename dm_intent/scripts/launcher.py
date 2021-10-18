@@ -29,7 +29,6 @@ dialogflow_client = DialogflowClient(project_id=configuration['project-id'],
                                      session_id=configuration['session-id'],
                                      key_path=key_path,
                                      language_code=configuration['language-code'])
-check_impormation_disease_flag = False
 
 def get_information(human_speech):
     response = dialogflow_client.detect_intent_text(human_speech)
@@ -48,12 +47,9 @@ def get_information(human_speech):
 def classify_intent(msg):
     ros_input = json.loads(msg.data, encoding='utf-8')
     if "dialog" in ros_input['header']['target']:
-        df_intent = ros_input[ros_input['header']['content']]['intent']
-        if check_impormation_disease_flag:
-            dialogflow_client.trigger_intent_event('check_information_health')
-            check_impormation_disease_flag = False
+        df_intent = ros_input['dialog_generation']['intent']
         if df_intent == 'check_information_disease':
-            check_impormation_disease_flag = True
+            dialogflow_client.trigger_intent_event('check_information_health')
     if "dialog_intent" in ros_input['header']['target']:
         text = ros_input['human_speech']['speech']
         id = ros_input['header']['id']
