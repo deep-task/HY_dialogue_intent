@@ -38,11 +38,20 @@ None
 
 ### 5.2 Start the module
 
-```
-$ git clone https://github.com/DeepTaskHY/DM_Intent_2.git
-$ docker-compose build
-$ docker-compose up dm
-```
+**docker environment**
+
+    $ git clone $rpository_rul
+    $ docker-compose build
+    $ docker-compose up dm
+
+**local environment(linux)**
+    $ git clone $rpository_url
+    $ cd $repository
+    $ sh dm_intent/model_download.sh
+    $ pip install -r requirements.txt
+    $ roslaunch dm_intent dm_intent_launcher.launch
+    
+
 
 ### 5.3 Test the module
 
