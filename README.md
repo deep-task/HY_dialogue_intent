@@ -54,24 +54,6 @@ None
     
 
 
-### 5.3 Test the module
-
-To test this module, you can execute the following command line. This command sends a ROS message.
-
-**homecare**
-
-```
-$ 
-```
-
-**reception**
-
-```
-$ 
-```
-
-
-
 ## 6. Input/Subscribed Topics
 
 ```
