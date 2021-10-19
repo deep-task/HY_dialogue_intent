@@ -45,6 +45,7 @@ None
     $ docker-compose up dm
 
 **local environment(linux)**
+
     $ git clone $rpository_url
     $ cd $repository
     $ sh dm_intent/model_download.sh
