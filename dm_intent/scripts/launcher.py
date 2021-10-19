@@ -48,7 +48,7 @@ def classify_intent(msg):
     ros_input = json.loads(msg.data, encoding='utf-8')
     if "dialog" in ros_input['header']['target']:
         df_intent = ros_input['dialog_generation']['intent']
-        if df_intent == 'check_information_disease':
+        if df_intent == 'check_information_disease' or df_intent == 'check_information_sleep_2' or df_intent == 'check_information_drink' or df_intent == 'check_information_smoke':
             dialogflow_client.trigger_intent_event('check_information_health')
     if "dialog_intent" in ros_input['header']['target']:
         text = ros_input['human_speech']['speech']
