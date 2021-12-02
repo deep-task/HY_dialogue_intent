@@ -38,6 +38,8 @@ None
 
 ### 5.2 Start the module
 
+- Go to [Author's Google Drive](https://drive.google.com/file/d/1Tya9XQrtlAv393xh8D_5MYfBAta15quz/view?usp=sharing) and download the JSON file (authorization key), and put it in the [authorization folder](dm_intent/keys/).
+
 **docker environment**
 
     $ git clone $rpository_rul
