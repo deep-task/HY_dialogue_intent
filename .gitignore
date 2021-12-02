@@ -135,7 +135,6 @@ dmypy.json
 dm_intent/configuration.json
 
 # Data
-dm_intent/keys/
 dm_intent/ckpt/
 dm_intent/data/data_kobert.pkl
 
