@@ -10,12 +10,10 @@ FILENAME='hyu_intent.zip'
 curl -c /tmp/cookie -s -L "https://drive.google.com/uc?export=download&id=${FILEID}" > /dev/null
 curl -Lb /tmp/cookie "https://drive.google.com/uc?export=download&confirm=`awk '/download/ {print $NF}' /tmp/cookie`&id="${FILEID} -o ${FILENAME}
 rm /tmp/cookie
-rm -rf src/keys
 rm -rf src/ckpt
 rm -rf src/configuration.json
 unzip $FILENAME
-mv hyu_intent/keys/configuration.json src/
-mv hyu_intent/keys src/
+mv hyu_intent/configuration.json src/
 mv hyu_intent/ckpt src/
 rm -r hyu_intent
 rm $FILENAME
